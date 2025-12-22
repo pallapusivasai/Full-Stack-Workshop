@@ -1,0 +1,154 @@
+/* ======================================================
+   1. GLOBAL RESET & BASE SETTINGS
+====================================================== */
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: #010814;
+}
+
+/* ======================================================
+   2. NAVBAR
+====================================================== */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* ======================================================
+   3. HERO SECTION
+====================================================== */
+.hero {
+  min-height: 100vh;
+  padding-top: 80px;
+  background:
+    linear-gradient(rgba(1, 8, 20, 0.85), rgba(1, 8, 20, 0.85)),
+    url("siva wallpaper.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero h1 {
+  font-weight: 700;
+}
+
+.hero p {
+  color: #d1d1d1;
+}
+
+/* ======================================================
+   4. SOCIAL ICONS
+====================================================== */
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-right: 15px;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0d6efd;
+  transform: translateY(-3px);
+}
+
+/* ======================================================
+   5. COMMON SECTION SPACING
+====================================================== */
+.section-padding {
+  padding: 80px 0;
+}
+
+/* ======================================================
+   6. ABOUT SECTION
+====================================================== */
+#about img {
+  max-width: 80%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#about p {
+  max-width: 550px;
+  line-height: 1.7;
+}
+
+/* ======================================================
+   7. SKILLS SECTION
+====================================================== */
+#skills {
+  background-color: #010814;
+}
+
+#skills label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+#skills .progress {
+  height: 18px;
+  border-radius: 20px;
+}
+
+#skills .progress-bar {
+  font-weight: 600;
+}
+
+/* ======================================================
+   8. PROJECT CARDS
+====================================================== */
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  border-radius: 15px 15px 0 0;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ======================================================
+   9. CONTACT FORM
+====================================================== */
+#contact input,
+#contact textarea {
+  border-radius: 10px;
+}
+
+#contact button:hover {
+  transform: scale(1.05);
+}
+
+/* ======================================================
+   10. FOOTER
+====================================================== */
+footer {
+  font-size: 0.95rem;
+}
+
+/* ======================================================
+   11. RESPONSIVE DESIGN
+====================================================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-padding {
+    padding: 60px 15px;
+  }
+}
