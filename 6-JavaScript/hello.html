@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>My First JavaScript</title>
+    
+</head>
+<body>
+    <input id="name" placeholder="Enter name">
+    <button onclick="sayHello()">Submit</button>
+
+    <script>
+    function sayHello() {
+        const name = document.getElementById("name").value.trim();
+        if (name) {
+            alert("Hello, " + name + "!");
+        } else {
+            alert("Please enter a name");
+        }
+    }
+    </script>
+</body>
+</html>

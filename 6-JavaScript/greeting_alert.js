@@ -1,4 +1,4 @@
-let name = prompt("What is your name?");
+const name = prompt("What is your name?");
 
 if (name !== null && name.trim() !== "") {
     alert("Hello, " + name + "!");
