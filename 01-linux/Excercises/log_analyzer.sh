@@ -5,7 +5,7 @@ VERBOSE=false
 if [ "$2" == "-v" ]; then
     VERBOSE=true
 fi
-LOG_FILE=${LOG_FILE:-"/d/Revature_Training/Day-1/linux/sample_log.txt"}
+LOG_FILE=${LOG_FILE:-"D:\Revature_Training\1-Linux\Excercises\sample_log.txt"}
 
 # Check if file exists
 if [ ! -f "$LOG_FILE" ]; then
@@ -53,4 +53,4 @@ if [ "$VERBOSE" = true ]; then
 fi
 
 echo "=== Recent Errors (Last 5) ==="
-grep -i "error" "$LOG_FILE" | tail -5
+grep -i "lserror" "$LOG_FILE" | tail -5
