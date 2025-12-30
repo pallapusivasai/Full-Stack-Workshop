@@ -2,7 +2,7 @@ function createEventEmitter() {
   const events = {};
 
   return {
-    // Subscribe to an event
+    // Subscribe to an events
     on(eventName, listener) {
       if (!events[eventName]) {
         events[eventName] = [];
