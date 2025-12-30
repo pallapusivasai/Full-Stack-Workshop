@@ -1,105 +1,93 @@
 # Review: 01-linux
 
 **Exercise:**  Exercise: Log File Analyzer Script
-**Review Date:** 2025-12-30 12:19
+**Review Date:** 2025-12-30 15:30
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 17
+**Files submitted:** 11
 
 ### Required Files
 
-- ❌ Missing: `log-analyzer.sh`
+- ✅ Found: `log-analyzer.sh`
 
 ### Code Review
 
 📄 **backup.sh**
-   Path: `01-linux/Challenges/backup.sh`
-   Lines: 29
+   Path: `01-linux/challenge-01/backup.sh`
+   Lines: 30
 
     - ✅ Has shebang (`#!/bin/bash`)
-    - ❌ Missing `set -e` for error handling
+    - ✅ Has error handling (`set -e`)
     - ✅ Handles command-line arguments
     - 💡 Consider adding more comments
-    - ✅ Variables are properly quoted
-
-   **Score: 3/5**
-
-📄 **disk-alert.sh**
-   Path: `01-linux/Challenges/disk-alert.sh`
-   Lines: 17
-
-    - ✅ Has shebang (`#!/bin/bash`)
-    - ❌ Missing `set -e` for error handling
-    - ✅ Handles command-line arguments
-    - 💡 Consider adding more comments
-    - ✅ Variables are properly quoted
-
-   **Score: 3/5**
-
-📄 **file-organizer.sh**
-   Path: `01-linux/Challenges/file-organizer.sh`
-   Lines: 35
-
-    - ❌ Missing shebang (`#!/bin/bash`)
-    - ❌ Missing `set -e` for error handling
-    - ✅ Handles command-line arguments
-    - 💡 Consider adding more comments
-    - ✅ Variables are properly quoted
-
-   **Score: 2/5**
-
-📄 **process-monitor.sh**
-   Path: `01-linux/Challenges/process-monitor.sh`
-   Lines: 24
-
-    - ✅ Has shebang (`#!/bin/bash`)
-    - ❌ Missing `set -e` for error handling
-    - ✅ Handles command-line arguments
-    - 💡 Consider adding more comments
-    - ✅ Variables are properly quoted
-
-   **Score: 3/5**
-
-📄 **user-audit.sh**
-   Path: `01-linux/Challenges/user-audit.sh`
-   Lines: 26
-
-    - ✅ Has shebang (`#!/bin/bash`)
-    - ❌ Missing `set -e` for error handling
-    - ✅ Handles command-line arguments
-    - 💡 Consider adding more comments
-    - ✅ Variables are properly quoted
-
-   **Score: 3/5**
-
-📄 **script.sh**
-   Path: `01-linux/excercises/devtraining/script.sh`
-   Lines: 1
-
-    - ❌ Missing shebang (`#!/bin/bash`)
-    - ❌ Missing `set -e` for error handling
-    - ⚠️ No argument handling detected
-    - 💡 Consider adding more comments
-    - 💡 Consider quoting variables to handle spaces
-
-   **Score: 0/5**
-
-📄 **log_analyzer.sh**
-   Path: `01-linux/excercises/log_analyzer.sh`
-   Lines: 62
-
-    - ✅ Has shebang (`#!/bin/bash`)
-    - ❌ Missing `set -e` for error handling
-    - ✅ Handles command-line arguments
-    - ✅ Has comments (9 lines)
     - ✅ Variables are properly quoted
 
    **Score: 4/5**
 
-### Topic Score: 18 / 40 (45%)
+📄 **disk-alert.sh**
+   Path: `01-linux/challenge-01/disk-alert.sh`
+   Lines: 18
+
+    - ✅ Has shebang (`#!/bin/bash`)
+    - ✅ Has error handling (`set -e`)
+    - ✅ Handles command-line arguments
+    - 💡 Consider adding more comments
+    - ✅ Variables are properly quoted
+
+   **Score: 4/5**
+
+📄 **file-organizer.sh**
+   Path: `01-linux/challenge-01/file-organizer.sh`
+   Lines: 37
+
+    - ❌ Missing shebang (`#!/bin/bash`)
+    - ✅ Has error handling (`set -e`)
+    - ✅ Handles command-line arguments
+    - 💡 Consider adding more comments
+    - ✅ Variables are properly quoted
+
+   **Score: 3/5**
+
+📄 **process-monitor.sh**
+   Path: `01-linux/challenge-01/process-monitor.sh`
+   Lines: 25
+
+    - ✅ Has shebang (`#!/bin/bash`)
+    - ✅ Has error handling (`set -e`)
+    - ✅ Handles command-line arguments
+    - 💡 Consider adding more comments
+    - ✅ Variables are properly quoted
+
+   **Score: 4/5**
+
+📄 **user-audit.sh**
+   Path: `01-linux/challenge-01/user-audit.sh`
+   Lines: 29
+
+    - ✅ Has shebang (`#!/bin/bash`)
+    - ✅ Has error handling (`set -e`)
+    - ✅ Handles command-line arguments
+    - 💡 Consider adding more comments
+    - ✅ Variables are properly quoted
+
+   **Score: 4/5**
+
+📄 **log-analyzer.sh**
+   Path: `01-linux/log-analyzer.sh`
+   Lines: 62
+
+    - ✅ Has shebang (`#!/bin/bash`)
+    - ✅ Has error handling (`set -e`)
+    - ✅ Handles command-line arguments
+    - ✅ Has comments (9 lines)
+    - ✅ Variables are properly quoted
+
+   **Score: 5/5**
+
+### Topic Score: 29 / 35 (82%)
 
 ### Technical Checklist
 
@@ -115,9 +103,7 @@
 
 ## Challenge
 
-**Status:** ⚠️ Not submitted
-
-Submit to: `01-linux/challenge-01/`
+**Status:** ✅ Submitted (8 files)
 
 ---
 

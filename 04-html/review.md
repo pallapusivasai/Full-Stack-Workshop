@@ -1,13 +1,13 @@
 # Review: 04-html
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-30 12:19
+**Review Date:** 2025-12-30 15:30
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 13
+**Files submitted:** 6
 
 ### Required Files
 
@@ -19,8 +19,8 @@
 ### Code Review
 
 📄 **portfolio-v1.html**
-   Path: `04-html/excercise-01/portfolio-v1.html`
-   Lines: 113
+   Path: `04-html/portfolio-v1.html`
+   Lines: 114
 
     - ✅ Has `<!DOCTYPE html>`
     - ✅ Uses semantic HTML5 tags
@@ -33,14 +33,14 @@
    **Score: 5/5**
 
 📄 **portfolio-v2.css**
-   Path: `04-html/excercise-01/portfolio-v2.css`
+   Path: `04-html/portfolio-v2.css`
    Lines: 70
 
    - ✅ CSS file present
 
 📄 **portfolio-v2.html**
-   Path: `04-html/excercise-01/portfolio-v2.html`
-   Lines: 76
+   Path: `04-html/portfolio-v2.html`
+   Lines: 77
 
     - ✅ Has `<!DOCTYPE html>`
     - ✅ Uses semantic HTML5 tags
@@ -52,8 +52,8 @@
    **Score: 5/5**
 
 📄 **portfolio-v3.html**
-   Path: `04-html/excercise-01/portfolio-v3.html`
-   Lines: 138
+   Path: `04-html/portfolio-v3.html`
+   Lines: 139
 
     - ✅ Has `<!DOCTYPE html>`
     - ✅ Uses semantic HTML5 tags
@@ -65,77 +65,7 @@
 
    **Score: 5/5**
 
-📄 **contact .html**
-   Path: `04-html/html-excercises/contact .html`
-   Lines: 101
-
-    - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
-    - ❌ Images missing `alt` attributes
-    - ✅ Has viewport meta tag (mobile-friendly)
-    - 💡 Add `lang` attribute to `<html>` tag
-
-   **Score: 2/5**
-
-📄 **form.html**
-   Path: `04-html/html-excercises/form.html`
-   Lines: 22
-
-    - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
-    - ✅ Has viewport meta tag (mobile-friendly)
-    - ✅ Has `lang` attribute
-
-   **Score: 4/5**
-
-📄 **portfolio.html**
-   Path: `04-html/html-excercises/portfolio.html`
-   Lines: 290
-
-    - ✅ Has `<!DOCTYPE html>`
-    - ✅ Uses semantic HTML5 tags
-    - ✅ Images have `alt` attributes
-    - ✅ Has viewport meta tag (mobile-friendly)
-    - 💡 Add `lang` attribute to `<html>` tag
-
-   **Score: 4/5**
-
-📄 **server.js**
-   Path: `04-html/html-excercises/server.js`
-   Lines: 14
-
-    - ✅ Uses `const`/`let` (no `var`)
-    - ✅ Uses strict equality (`===`)
-    - ✅ Uses arrow functions
-    - ✅ Uses template literals
-    - 💡 Consider using array methods (map, filter, reduce)
-
-   **Score: 4/5**
-
-📄 **song_collctions.html**
-   Path: `04-html/html-excercises/song_collctions.html`
-   Lines: 55
-
-    - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
-    - ✅ Images have `alt` attributes
-    - ❌ Missing viewport meta tag
-    - 💡 Add `lang` attribute to `<html>` tag
-
-   **Score: 2/5**
-
-📄 **user_details_form.html**
-   Path: `04-html/html-excercises/user_details_form.html`
-   Lines: 93
-
-    - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
-    - ❌ Missing viewport meta tag
-    - 💡 Add `lang` attribute to `<html>` tag
-
-   **Score: 2/5**
-
-### Topic Score: 53 / 65 (81%)
+### Topic Score: 35 / 35 (100%)
 
 ---
 
