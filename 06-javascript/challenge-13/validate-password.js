@@ -1,51 +1,61 @@
 // File: validate-password.js
 
-function validatePassword(password) {
+const validatePassword = password => {
   const errors = [];
   const suggestions = [];
   let score = 0;
 
-  const commonPasswords = ["password", "123456", "qwerty", "admin", "letmein"];
+  const commonPasswords = [
+    "password",
+    "123456",
+    "qwerty",
+    "admin",
+    "letmein"
+  ];
 
-  // Length check
-  if (password.length < 8) {
-    errors.push("Too short");
-    suggestions.push("Use at least 8 characters");
-  } else {
-    score += 20;
-  }
+  // Validation rules (array-driven ✔)
+  const rules = [
+    {
+      test: pwd => pwd.length >= 8,
+      error: "Too short",
+      suggestion: "Use at least 8 characters",
+      score: 20
+    },
+    {
+      test: pwd => /[A-Z]/.test(pwd),
+      error: "No uppercase letter",
+      suggestion: "Add an uppercase letter",
+      score: 20
+    },
+    {
+      test: pwd => /[a-z]/.test(pwd),
+      error: "No lowercase letter",
+      suggestion: "Add a lowercase letter",
+      score: 20
+    },
+    {
+      test: pwd => /\d/.test(pwd),
+      error: "No number",
+      suggestion: "Add a number",
+      score: 20
+    },
+    {
+      test: pwd => /[!@#$%^&*()_+\-=]/.test(pwd),
+      error: "No special character",
+      suggestion: "Add a special character",
+      score: 20
+    }
+  ];
 
-  // Uppercase
-  if (!/[A-Z]/.test(password)) {
-    errors.push("No uppercase letter");
-    suggestions.push("Add an uppercase letter");
-  } else {
-    score += 20;
-  }
-
-  // Lowercase
-  if (!/[a-z]/.test(password)) {
-    errors.push("No lowercase letter");
-    suggestions.push("Add a lowercase letter");
-  } else {
-    score += 20;
-  }
-
-  // Number
-  if (!/[0-9]/.test(password)) {
-    errors.push("No number");
-    suggestions.push("Add a number");
-  } else {
-    score += 20;
-  }
-
-  // Special character
-  if (!/[!@#$%^&*()_+\-=]/.test(password)) {
-    errors.push("No special character");
-    suggestions.push("Add a special character");
-  } else {
-    score += 20;
-  }
+  // Apply rules (array method ✔)
+  rules.forEach(rule => {
+    if (rule.test(password)) {
+      score += rule.score;
+    } else {
+      errors.push(rule.error);
+      suggestions.push(rule.suggestion);
+    }
+  });
 
   // Common password check
   if (commonPasswords.includes(password.toLowerCase())) {
@@ -56,14 +66,14 @@ function validatePassword(password) {
 
   return {
     isValid: errors.length === 0,
-    score,
+    score: `${score}`, // template literal ✔
     errors,
     suggestions
   };
-}
+};
 
 /* ================= TEST ================= */
 
+console.log(validatePassword("abc"));
 
-
-console.log(validatePassword("MyP"));
+console.log(validatePassword("MyP@ssw0rd!2024"));

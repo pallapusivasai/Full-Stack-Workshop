@@ -12,7 +12,7 @@
       padding: 20px;
     }
 
-    h2 {
+    header h2 {
       text-align: center;
       margin-bottom: 20px;
     }
@@ -100,21 +100,43 @@
 
 <body>
 
-<h2>Image Gallery</h2>
+<main>
 
-<div class="gallery" id="gallery"></div>
+  <header>
+    <h2>Image Gallery</h2>
+  </header>
+
+  <section
+    class="gallery"
+    id="gallery"
+    aria-label="Thumbnail image gallery">
+  </section>
+
+</main>
 
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox">
+<section
+  class="lightbox"
+  id="lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Image lightbox">
+
   <div class="lightbox-content">
-    <span class="close" id="closeBtn">&times;</span>
-    <span class="nav prev" id="prevBtn">&#10094;</span>
-    <img id="lightboxImg" />
-    <span class="nav next" id="nextBtn">&#10095;</span>
+    <span class="close" id="closeBtn" aria-label="Close">&times;</span>
+    <span class="nav prev" id="prevBtn" aria-label="Previous image">&#10094;</span>
+
+    <img
+      id="lightboxImg"
+      alt="Expanded gallery image" />
+
+    <span class="nav next" id="nextBtn" aria-label="Next image">&#10095;</span>
+
     <div class="caption" id="caption"></div>
     <div class="counter" id="counter"></div>
   </div>
-</div>
+
+</section>
 
 <script src="gallery.js"></script>
 </body>

@@ -10,8 +10,8 @@ const resetBtn = document.getElementById("reset");
 const stepButtons = document.querySelectorAll(".step-btn");
 
 // Update UI
-function updateDisplay() {
-  countDisplay.textContent = count;
+const updateDisplay = () => {
+  countDisplay.textContent = `${count}`;
 
   if (count > 0) {
     countDisplay.style.color = "green";
@@ -20,7 +20,7 @@ function updateDisplay() {
   } else {
     countDisplay.style.color = "black";
   }
-}
+};
 
 // Increment
 incrementBtn.addEventListener("click", () => {
@@ -28,13 +28,9 @@ incrementBtn.addEventListener("click", () => {
   updateDisplay();
 });
 
-// Decrement (cannot go below 0)
+// Decrement (allows negative values)
 decrementBtn.addEventListener("click", () => {
-  if (count - step <= 0) {
-    count -= step;
-  } else {
-    count = 0;
-  }
+  count -= step;
   updateDisplay();
 });
 
@@ -49,8 +45,12 @@ stepButtons.forEach(button => {
   button.addEventListener("click", () => {
     step = Number(button.dataset.step);
 
-    // Highlight active step
     stepButtons.forEach(btn => btn.classList.remove("active-step"));
     button.classList.add("active-step");
+
+    countDisplay.setAttribute(
+      "aria-label",
+      `Counter value is ${count} with step ${step}`
+    );
   });
 });

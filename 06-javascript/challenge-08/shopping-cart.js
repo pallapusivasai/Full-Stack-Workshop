@@ -9,21 +9,28 @@ function createShoppingCart() {
 
       if (existing) {
         existing.quantity += product.quantity;
+        console.log(
+          `Updated ${existing.name} quantity to ${existing.quantity}`
+        );
       } else {
         items.push({ ...product });
+        console.log(`Added ${product.name} to cart`);
       }
     },
 
     // Remove item by id
     removeItem(id) {
       items = items.filter(item => item.id !== id);
+      console.log(`Removed item with id ${id}`);
     },
 
     // Update quantity for a given item
     updateQuantity(id, quantity) {
       const item = items.find(item => item.id === id);
+
       if (item && quantity > 0) {
         item.quantity = quantity;
+        console.log(`Set ${item.name} quantity to ${quantity}`);
       }
     },
 
@@ -57,6 +64,7 @@ function createShoppingCart() {
     applyDiscount(code, percent) {
       if (percent > 0 && percent <= 100) {
         discountPercent = percent;
+        console.log(`Applied discount code "${code}" (${percent}%)`);
       }
     },
 
@@ -64,6 +72,7 @@ function createShoppingCart() {
     clear() {
       items = [];
       discountPercent = 0;
+      console.log(`Cart cleared`);
     }
   };
 }
@@ -76,17 +85,17 @@ cart.addItem({ id: 1, name: 'Laptop', price: 999, quantity: 1 });
 cart.addItem({ id: 2, name: 'Mouse', price: 29, quantity: 2 });
 cart.addItem({ id: 1, name: 'Laptop', price: 999, quantity: 1 });
 
-console.log(cart.getItems());
+console.log(`Items in cart:`, cart.getItems());
 
 cart.updateQuantity(1, 3);
 cart.removeItem(2);
 
-console.log(cart.getTotal());        // 2997
-console.log(cart.getItemCount());    // 3
-console.log(cart.isEmpty());         // false
+console.log(`Total price: $${cart.getTotal()}`);
+console.log(`Item count: ${cart.getItemCount()}`);
+console.log(`Is cart empty? ${cart.isEmpty()}`);
 
 cart.applyDiscount('SAVE10', 10);
-console.log(cart.getTotal());        // 2697.30
+console.log(`Total after discount: $${cart.getTotal()}`);
 
 cart.clear();
-console.log(cart.isEmpty());         // true
+console.log(`Is cart empty? ${cart.isEmpty()}`);

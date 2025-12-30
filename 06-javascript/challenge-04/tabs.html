@@ -57,10 +57,15 @@
 
 <body>
 
-  <div class="tabs-container">
-    <div class="tabs" id="tabs"></div>
-    <div class="tab-content" id="tabContent"></div>
-  </div>
+  <main>
+    <section class="tabs-container" aria-label="Tabbed Content">
+      
+      <nav class="tabs" id="tabs" role="tablist"></nav>
+
+      <section class="tab-content" id="tabContent" role="tabpanel"></section>
+
+    </section>
+  </main>
 
   <script src="tabs.js"></script>
 </body>

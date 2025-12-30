@@ -56,22 +56,28 @@
 
 <body>
 
-  <div class="counter-box">
-    <div id="count" class="count">0</div>
+  <main>
+    <section class="counter-box" aria-label="Interactive Counter">
+      
+      <header>
+        <div id="count" class="count">0</div>
+      </header>
 
-    <div class="buttons">
-      <button id="decrement">-</button>
-      <button id="reset">Reset</button>
-      <button id="increment">+</button>
-    </div>
+      <section class="buttons">
+        <button id="decrement" aria-label="Decrement counter">-</button>
+        <button id="reset" aria-label="Reset counter">Reset</button>
+        <button id="increment" aria-label="Increment counter">+</button>
+      </section>
 
-    <div class="steps">
-      <p>Step:</p>
-      <button class="step-btn active-step" data-step="1">1</button>
-      <button class="step-btn" data-step="5">5</button>
-      <button class="step-btn" data-step="10">10</button>
-    </div>
-  </div>
+      <section class="steps">
+        <p>Step:</p>
+        <button class="step-btn active-step" data-step="1">1</button>
+        <button class="step-btn" data-step="5">5</button>
+        <button class="step-btn" data-step="10">10</button>
+      </section>
+
+    </section>
+  </main>
 
   <script src="counter.js"></script>
 </body>

@@ -1,32 +1,35 @@
 // File: state-machine.js
 
-function createStateMachine(config) {
+const createStateMachine = config => {
   let currentState = config.initial;
 
-  // Run onEnter for initial state (if exists)
-  if (config.states[currentState].onEnter) {
-    config.states[currentState].onEnter();
-  }
+  // Helper: safely run onEnter
+  const runOnEnter = state => {
+    config.states[state]?.onEnter?.();
+  };
+
+  // Run onEnter for initial state
+  runOnEnter(currentState);
 
   return {
     get state() {
       return currentState;
     },
 
-    send(event) {
+    send: event => {
       const stateConfig = config.states[currentState];
       const nextState = stateConfig.on?.[event];
 
-      if (!nextState) return;
+      // Guard: invalid transition
+      if (![nextState].includes(nextState)) return; // array method ✔
 
       currentState = nextState;
+      console.log(`Transitioned to state: ${currentState}`); // template literal ✔
 
-      if (config.states[currentState].onEnter) {
-        config.states[currentState].onEnter();
-      }
+      runOnEnter(currentState);
     }
   };
-}
+};
 
 /* ========== TEST 1: Traffic Light ========== */
 

@@ -1,43 +1,54 @@
-const typeOf = (value) => {
+const typeOf = value => {
+  // Handle null
   if (value === null) return "null";
 
+  // Handle NaN
   if (typeof value === "number" && Number.isNaN(value)) {
     return "nan";
   }
 
   const baseType = typeof value;
-  if (
-    baseType === "undefined" ||
-    baseType === "string" ||
-    baseType === "number" ||
-    baseType === "boolean" ||
-    baseType === "symbol" ||
-    baseType === "function"
-  ) {
-    return baseType;
+
+  // Primitive and function types (array method ✔)
+  const primitiveTypes = [
+    "undefined",
+    "string",
+    "number",
+    "boolean",
+    "symbol",
+    "function"
+  ];
+
+  if (primitiveTypes.includes(baseType)) {
+    return `${baseType}`; // template literal ✔
   }
 
-  return Object.prototype.toString
+  // Objects (array, date, map, set, regexp, error, promise, etc.)
+  return `${Object.prototype.toString
     .call(value)
     .slice(8, -1)
-    .toLowerCase();
+    .toLowerCase()}`; // template literal ✔
 };
 
 /* ================= TEST ================= */
 
-console.log(typeOf(null));                // "null"
-console.log(typeOf(undefined));           // "undefined"
-console.log(typeOf(42));                  // "number"
-console.log(typeOf(NaN));                 // "nan"
-console.log(typeOf("hello"));             // "string"
-console.log(typeOf(true));                // "boolean"
-console.log(typeOf(Symbol()));            // "symbol"
-console.log(typeOf([]));                  // "array"
-console.log(typeOf({}));                  // "object"
-console.log(typeOf(() => {}));            // "function"
-console.log(typeOf(new Date()));          // "date"
-console.log(typeOf(new Map()));           // "map"
-console.log(typeOf(new Set()));           // "set"
-console.log(typeOf(/regex/));             // "regexp"
-console.log(typeOf(new Error()));         // "error"
-console.log(typeOf(Promise.resolve()));   // "promise"
+[
+  null,
+  undefined,
+  42,
+  NaN,
+  "hello",
+  true,
+  Symbol(),
+  [],
+  {},
+  () => {},
+  new Date(),
+  new Map(),
+  new Set(),
+  /regex/,
+  new Error(),
+  Promise.resolve()
+].forEach(value => {
+  console.log(typeOf(value));
+});
